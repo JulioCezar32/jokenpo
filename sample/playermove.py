@@ -6,7 +6,7 @@ class PlayerMove():
         return self.move
 
     def choose_scissor(self):
-        self._scissor = 'Scissor'
+        self.move = 'Scissor'
         return self.move
 
     def choose_paper(self):
