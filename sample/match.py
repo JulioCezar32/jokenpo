@@ -3,17 +3,15 @@ import playermove
 class match():
 
 
-    def winner_loser(self):
-        self.player_
-        if (self.'Paper' && 'Stone'):
+    self.moves = ['Paper', 'Stone']
+
+    def getwinner(self):
+
+        if ('Paper' in self.moves) && ('Stone' in self.moves):
             self.winner = 'Paper'
-            self.loser = 'Stone'
-            return self
-
-        if ('Scissor' && 'Paper'):
+        else if ('Scissor' in self.moves) && ('Paper' in self.moves):
             self.winner = 'Scissor'
-            self.loser = 'Paper'
-
-        if ( 'Stone' &&'Scissor'):
+        else if ('Stone' in self.moves) && ('Scissor' in self.moves):
             self.winner = 'Stone'
-            self.loser = 'Scissor'
+        else:
+            self.winner = 'Draw'
