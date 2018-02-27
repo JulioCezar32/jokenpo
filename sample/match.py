@@ -1,17 +1,20 @@
 import playermove
 
-class match():
+class Match():
 
-
-    self.moves = ['Paper', 'Stone']
+    def __init__(self, player_1, player_2):
+        self._player_1 = player_1
+        self._player_2 = player_2
 
     def getwinner(self):
+        self.moves = [self._player_1, self._player_2]
 
-        if ('Paper' in self.moves) && ('Stone' in self.moves):
+        if ('Paper' in self.moves) and ('Stone' in self.moves):
             self.winner = 'Paper'
-        else if ('Scissor' in self.moves) && ('Paper' in self.moves):
+        elif ('Scissor' in self.moves) and ('Paper' in self.moves):
             self.winner = 'Scissor'
-        else if ('Stone' in self.moves) && ('Scissor' in self.moves):
+        elif ('Stone' in self.moves) and ('Scissor' in self.moves):
             self.winner = 'Stone'
         else:
             self.winner = 'Draw'
+        return self.winner
